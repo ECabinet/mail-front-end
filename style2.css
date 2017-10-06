@@ -22,25 +22,24 @@ body {
     width: 70%;
     height: 500px;
     background: #fff;
-    border-radius: 2px;
+    border-radius: 5px;
 }
 
 #left {
     padding: 30px;
-    background: url('images/skyline.jpg');
+    background: url('images/skyline.png');
     background-size: cover;
     position: relative;
+    overflow: hidden
 }
 
-#left:before {
-    position: absolute;
-    content:"";
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background-color: rgba(153, 186, 221, 0.8);
-    z-index:0;
+#left h1 {
+    font-weight: 300;
+    margin-top: 30px;
+}
+
+#left li {
+    list-style: none;
 }
 
 #form {
@@ -49,6 +48,7 @@ body {
 
 #form h1 {
     font-size: 1.5em;
+    font-weight: 300;
     color: rgba(153, 186, 221, 1);
     margin-bottom: 50px;
 }
@@ -85,16 +85,59 @@ body {
     border-bottom: 2px solid #A9A9A9;
 }
 
-
-#form button {
-    border-radius: 23px;
-    border: 2px solid rgba(153, 186, 221, 1);
-    margin: 30px auto 0px auto;
-    padding: 10px 20px 10px 20px;
-    color: rgba(153, 186, 221, 1);
+#form .buttons  {
+    margin-top: 70px;
 }
 
-#form button:hover {
+#form button.sign-up {
+    transition: background-color 0.5s ease, width 0.5s ease;
+    border-radius: 23px;
+    border: 2px solid rgba(153, 186, 221, 1);
+    margin: 0px auto 0px auto;
+    padding: 10px 20px 10px 20px;
+    color: rgba(153, 186, 221, 1);
+    width: 110px;
+}
+
+#form button.sign-up:hover {
     color: #fff;
+    width: 150px;
     background: rgba(153, 186, 221, 1);
+}
+
+#form button.social-btn {
+    transition: background-color 0.5s ease, width 0.5s ease;
+    border-radius: 23px;
+    border: 2px solid rgba(153, 186, 221, 1);
+    color: #fff;
+    line-height: 38px;
+    width: 45px;
+    margin: 0px 5px 0px 5px;
+}
+
+.facebook {
+    background: #3B5998;
+}
+
+.facebook:hover {
+    background: #fff;
+    color: #3B5998 !important;
+}
+
+.twitter {
+    background: #00aced;
+}
+
+.twitter:hover {
+    background: #fff;
+    color: #00aced !important;
+}
+
+.google {
+    background: #dd4b39;
+}
+
+.google:hover {
+    background: #fff;
+    color: #dd4b39 !important;
 }
